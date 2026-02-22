@@ -5,7 +5,7 @@ import { getCandidateByEmail, getJobsList, applyToJob } from './services/api'
 import './App.css'
 
 function App() {
-  const EMAIL = 'EMAIL';
+  const EMAIL = 'alexis.h.gonz@gmail.com';
 
   const [candidate, setCandidate] = useState(null);
   const [jobs, setJobs] = useState([]);
@@ -61,6 +61,7 @@ function App() {
         candidateId: candidate.candidateId,
         jobId,
         repoUrl: url,
+        applicationId: candidate.applicationId
       });
       setStatuses(prev => ({ ...prev, [jobId]: 'success' }));
     } catch (err) {
